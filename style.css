@@ -514,8 +514,8 @@ form .submit:hover {
 .test-card {
   width: 420px;
   margin: 20px;
-  height: 680px;
-  padding: 40px 40px;
+  height: 660px;
+  padding: 30px 30px;
   background: rgb(214, 214, 214);
   border-radius: 40px;
   color: rgb(78, 155, 155);
