@@ -6,8 +6,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
   <title>Rainbow Kids A Play School</title>
+  <link rel="icon" type="image/png" href="./Assets/Logo-cropped.png">
 
   <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" />
   <link href="https://fonts.googleapis.com/css2?family=Yellowtail&display=swap" rel="stylesheet" />
@@ -23,6 +25,7 @@
 </head>
 
 <body>
+  <a name="Home"></a>
   <nav class="navbar navbar-expand-md navbar-light bg-light sticky-top" style="
         width: 100%;
         
@@ -41,6 +44,7 @@
           #f7f8f8
         ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
       ">
+
     <div class="container-fluid" style="width: 100%;">
       <a href="#Home" class="navbar-brand"><img src="./Assets/Logo-cropped.png" alt="Logo" style="
               width: 120px;
@@ -100,10 +104,10 @@
       </div>
     </div>
   </nav>
-  <a name="Home"></a>
+
   <section>
 
-    <div class="w3-row" style="
+    <div class="w3-row-padding" style="
           position: relative;
           background: #a8ff78; /* fallback for old browsers */
           background: -webkit-linear-gradient(
@@ -116,71 +120,105 @@
             #78ffd6,
             #a8ff78
           ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-          height: 100%;
+          
           width: 100%;
         ">
-      <div class="w3-col w3-container m12 l5 "
-        style=" width: 500px; height: 550px;justify-content: center;align-items: center;">
-
-
-        <img src="./Assets/1.jpg" alt="img" style="width: 500px; height: 500px;" class="slides w3-animate-fading w3-mobile" />
-
-        <img src="./Assets/2.jpg" alt="img" style="width: 500px; height: 500px;" class="slides w3-animate-fading w3-mobile" />
-
-
-        <img src="./Assets/slide.jpg" alt="img" style="width: 500px; height: 500px;" class="slides w3-animate-fading w3-mobile" />
-
-        <img src="./Assets/slide1.jpg" alt="img" style="width: 500px; height: 500px;"
-          class="slides w3-animate-fading w3-mobile" />
 
 
 
-        <img src="./Assets/slide3.jpg" alt="img" style="width: 500px; height: 500px;"
-          class="slides w3-animate-fading w3-mobile" />
+
+      <div class="w3-col w3-container s10 m12 l4 w3-margin" style=" justify-content: center;align-items: center;">
+
+        <div class="w3-content" style="width: 370px; ">
+          <img src="./Assets/1.jpg" alt="img" style="width: 370px; height: 370px;" class="mySlides" />
+
+          <img src="./Assets/2.jpg" alt="img" style="width:370px; height:370px;" class="mySlides" />
 
 
-        <img src="./Assets/slide4.jpg" alt="img" style="width: 500px; height: 500px;"
-          class="slides w3-animate-fading w3-mobile" />
+          <img src="./Assets/slide.jpg" alt="img" style="width:370px; height:370px;" class="mySlides" />
+
+          <img src="./Assets/slide1.jpg" alt="img" style="width:370px; height:370px;" class="mySlides" />
 
 
 
-        <img src="./Assets/3.jpg" alt="img" style="width: 500px; height: 500px;" class="slides w3-animate-fading w3-mobile" />
+          <img src="./Assets/slide3.jpg" alt="img" style="width:370px; height:370px;" class="mySlides" />
 
 
-        <img src="./Assets/4.jpg" alt="img" style="width: 500px; height: 500px;" class="slides w3-animate-fading w3-mobile" />
-
-        <img src="./Assets/5.jpg" alt="img" style="width: 500px; height: 0px;" class="slides w3-animate-fading w3-mobile" />
+          <img src="./Assets/slide4.jpg" alt="img" style="width:370px; height:370px;" class="mySlides" />
 
 
+
+          <img src="./Assets/3.jpg" alt="img" style="width:370px; height:370px;" class="mySlides" />
+
+
+          <img src="./Assets/4.jpg" alt="img" style="width:370px; height:370px;" class="mySlides" />
+
+          <img src="./Assets/5.jpg" alt="img" style="width:370px; height:370px;" class="mySlides" />
+
+          <div class="w3-center">
+            <div class="w3-section">
+              <button class="w3-button w3-light-green" style="border-radius:20px ; margin-right: 50px; outline:none;"
+                onclick="plusDivs(-1)">❮ Prev</button>
+              <button class="w3-button w3-light-green" style="border-radius:20px ; outline:none;"
+                onclick="plusDivs(1)">Next ❯</button>
+            </div>
+
+          </div>
+        </div>
       </div>
-      <div class="w3-col w3-container m4 l3 " style="justify-content: center;align-items: center;">
+      <script>
+        var slideIndex = 1;
+        showDivs(slideIndex);
+
+        function plusDivs(n) {
+          showDivs(slideIndex += n);
+        }
+
+        function currentDiv(n) {
+          showDivs(slideIndex = n);
+        }
+
+        function showDivs(n) {
+          var i;
+          var x = document.getElementsByClassName("mySlides");
+          var dots = document.getElementsByClassName("demo");
+          if (n > x.length) {
+            slideIndex = 1
+          }
+          if (n < 1) {
+            slideIndex = x.length
+          }
+          for (i = 0; i < x.length; i++) {
+            x[i].style.display = "none";
+          }
+          for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" w3-red", "");
+          }
+          x[slideIndex - 1].style.display = "block";
+          dots[slideIndex - 1].className += " w3-red";
+        }
+      </script>
+      <div class="w3-col w3-container s10 m5 l3 " style="width:320px;justify-content: center;align-items: center;">
         <h1 style="
         margin-top: 13%;
-        margin-left: 5%;
+        
         display: flex;
         font-size: 50px;
         font-family: 'Bangers', cursive;
         font-weight: 250;">Rainbow Kids: A Play School</h1>
         <br>
-        <h1 style="
-        margin-top: 5%;
-        margin-left: 5%;
-        display: flex;
-        font-size: 40px;
-        font-family: 'Bangers', cursive;
-        font-weight: 200;">Admissions Open!</h1>
-
+        <h1 class="ml12" style="width: 310px;">Admissions Open!</h1>
 
 
       </div>
 
-      <div class="w3-col w3-container m8 l4" style="width: 400px;height: 610px;">
-        <img src="./Assets/Facilities.jpg" class="w3-display-middleright" alt="img" style="
-              margin-left: 0px;
+      <div class="w3-col w3-container s10 m5 l5" style="width: 310px;height: 600px;margin-left: 0;">
+        <img src="./Assets/Facilities.jpg" alt="img" style="
+              margin-right: 5px;
               position: center;
               justify-content: center;
               align-items: center;
-              width: 430px;
+              width: 400px;
               height: 600px;
               margin-top: 10px;
             " />
@@ -189,24 +227,7 @@
     </div>
 
   </section>
-  <script>
-    var slideIndex = 0;
-    carousel();
 
-    function carousel() {
-      var i;
-      var x = document.getElementsByClassName("slides");
-      for (i = 0; i < x.length; i++) {
-        x[i].style.display = "none";
-      }
-      slideIndex++;
-      if (slideIndex > x.length) {
-        slideIndex = 1
-      }
-      x[slideIndex - 1].style.display = "block";
-      setTimeout(carousel, 8500); // Change image every 8.5 seconds
-    }
-  </script>
 
   <div class="w3-display-container w3-mobile">
 
@@ -229,9 +250,8 @@
     background: -webkit-linear-gradient(to right, #ff9068, #ff4b1f);  /* Chrome 10-25, Safari 5.1-6 */
     background: linear-gradient(to right, #ff9068, #ff4b1f); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     
-    ">
-      <h2 id="Gallery"
-        style="margin-top: 20px;margin-bottom: 20px; justify-content:center;text-align: center;color: beige;">
+    "><a name="Gallery"></a>
+      <h2 style="margin-top: 20px;margin-bottom: 20px; justify-content:center;text-align: center;color: beige;">
         Inaugration Ceremony</h2>
       <h3 style="margin-top: 0;margin-bottom: 20px;justify-content:center;text-align: center;color: beige;">12th
         December
@@ -316,25 +336,34 @@
         width: 400px;
         height: 400px;background:  none;">
 
-          <img src="./Assets/1.8.JPG" alt="i" style="width: 400px;height: 420px;" onclick="onClick(this)"
+          <img src="./Assets/1.91.JPG" alt="i" style="width: 370px;height: 420px;" onclick="onClick(this)"
             class="w3-hover-opacity">
 
         </div>
         <div class="swiper-slide" id="3" style="background-position: center;
         background-size: cover;
-        width: 400px;
+        width: 360px;
         height: 400px;background:  none;">
 
-          <img src="./Assets/1.9.JPG" alt="i" style="width: 400px;height: 420px;" onclick="onClick(this)"
+          <img src="./Assets/1.8.JPG" alt="i" style="width: 360px;height: 420px;" onclick="onClick(this)"
             class="w3-hover-opacity">
 
         </div>
         <div class="swiper-slide" id="3" style="background-position: center;
         background-size: cover;
-        width: 400px;
+        width: 360px;
         height: 400px;background:  none;">
 
-          <img src="./Assets/2.0.JPG" alt="i" style="width: 400px;height: 420px;" onclick="onClick(this)"
+          <img src="./Assets/1.9.JPG" alt="i" style="width: 360px;height: 420px;" onclick="onClick(this)"
+            class="w3-hover-opacity">
+
+        </div>
+        <div class="swiper-slide" id="3" style="background-position: center;
+        background-size: cover;
+        width: 360px;
+        height: 400px;background:  none;">
+
+          <img src="./Assets/2.0.JPG" alt="i" style="width: 360px;height: 420px;" onclick="onClick(this)"
             class="w3-hover-opacity">
 
         </div>
@@ -345,9 +374,12 @@
       </div>
       <!-- Add Pagination -->
       <div class="swiper-pagination"></div>
+      <div class="swiper-button-next" style="color: white;"></div>
+      <div class="swiper-button-prev" style="color: white;"></div>
     </div>
 
   </div>
+
 
   <div class="w3-row-cell w3-mobile" style="height: 600px;">
     <div class="swiper-container" style="height: 100%; width: 100%;margin: 0;padding: 0;background: #2F7336;  /* fallback for old browsers */
@@ -368,10 +400,20 @@
         width: 400px;
         height: 380px;background:none;">
 
-          <img src="./Assets/3.5.jpg" alt="i" style="width: 400px;height: 370px;" onclick="onClick(this)"
+          <img src="./Assets/3.5.JPG" alt="i" style="width: 400px;height: 370px;" onclick="onClick(this)"
             class="w3-hover-opacity">
 
         </div>
+        <div class="swiper-slide" id="3" style="background-position: center;
+        background-size: cover;
+        width: 400px;
+        height: 380px;background:  none;">
+
+          <img src="./Assets/3.93.JPG" alt="i" style="width: 400px;height: 420px;" onclick="onClick(this)"
+            class="w3-hover-opacity">
+
+        </div>
+
 
         <div class="swiper-slide" id="3" style="background-position: center;
         background-size: cover;
@@ -379,7 +421,7 @@
         height: 380px;background:  none;">
           <div class="imgBx">
 
-            <img src="./Assets/3.1.jpg" alt="i" style="width: 400px;height: 400px;" onclick="onClick(this)"
+            <img src="./Assets/3.1.JPG" alt="i" style="width: 400px;height: 400px;" onclick="onClick(this)"
               class="w3-hover-opacity">
 
           </div>
@@ -392,7 +434,7 @@
         height: 380px;background:  none;">
           <div class="imgBx">
 
-            <img src="./Assets/3.2.jpg" alt="i" style="width: 400px;height: 400px;" onclick="onClick(this)"
+            <img src="./Assets/3.2.JPG" alt="i" style="width: 400px;height: 400px;" onclick="onClick(this)"
               class="w3-hover-opacity">
 
           </div>
@@ -403,7 +445,7 @@
         width: 400px;
         height: 380px;background:  none;">
 
-          <img src="./Assets/3.3.jpg" alt="i" style="width: 400px;height: 400px;" onclick="onClick(this)"
+          <img src="./Assets/3.3.JPG" alt="i" style="width: 400px;height: 400px;" onclick="onClick(this)"
             class="w3-hover-opacity">
 
         </div>
@@ -412,7 +454,7 @@
         width: 400px;
         height: 380px;background:  none;">
 
-          <img src="./Assets/3.4.jpg" alt="i" style="background-position: center;
+          <img src="./Assets/3.4.JPG" alt="i" style="background-position: center;
             width: 400px;height: 400px;" onclick="onClick(this)" class="w3-hover-opacity">
 
         </div>
@@ -422,7 +464,7 @@
         width: 400px;
         height: 380px;background:  none;">
 
-          <img src="./Assets/3.6.jpg" alt="i" style="margin-left:15px;width: 380px;height: 430px;"
+          <img src="./Assets/3.6.JPG" alt="i" style="margin-left:15px;width: 380px;height: 430px;"
             onclick="onClick(this)" class="w3-hover-opacity">
 
         </div>
@@ -431,7 +473,43 @@
         width: 400px;
         height: 380px;background:  none;">
 
-          <img src="./Assets/3.7.jpg" alt="i" style="width: 400px;height: 420px;" onclick="onClick(this)"
+          <img src="./Assets/3.7.JPG" alt="i" style="width: 400px;height: 420px;" onclick="onClick(this)"
+            class="w3-hover-opacity">
+
+        </div>
+        <div class="swiper-slide" id="3" style="background-position: center;
+        background-size: cover;
+        width: 400px;
+        height: 380px;background:  none;">
+
+          <img src="./Assets/3.8.JPG" alt="i" style="width: 400px;height: 420px;" onclick="onClick(this)"
+            class="w3-hover-opacity">
+
+        </div>
+        <div class="swiper-slide" id="3" style="background-position: center;
+        background-size: cover;
+        width: 400px;
+        height: 380px;background:  none;">
+
+          <img src="./Assets/3.9.JPG" alt="i" style="width: 400px;height: 420px;" onclick="onClick(this)"
+            class="w3-hover-opacity">
+
+        </div>
+        <div class="swiper-slide" id="3" style="background-position: center;
+        background-size: cover;
+        width: 400px;
+        height: 380px;background:  none;">
+
+          <img src="./Assets/3.91.JPG" alt="i" style="width: 400px;height: 420px;" onclick="onClick(this)"
+            class="w3-hover-opacity">
+
+        </div>
+        <div class="swiper-slide" id="3" style="background-position: center;
+        background-size: cover;
+        width: 400px;
+        height: 380px;background:  none;">
+
+          <img src="./Assets/3.92.JPG" alt="i" style="width: 400px;height: 420px;" onclick="onClick(this)"
             class="w3-hover-opacity">
 
         </div>
@@ -442,9 +520,11 @@
       </div>
       <!-- Add Pagination -->
       <div class="swiper-pagination"></div>
+      <div class="swiper-button-next" style="color: white;"></div>
+      <div class="swiper-button-prev" style="color: white;"></div>
     </div>
   </div>
-  <div class="w3-row-cell w3-mobile" style="height: 700px;">
+  <div class="w3-row-cell w3-mobile" style="height: 600px;">
     <div class="swiper-container" style="height: 100%; width: 100%;margin: 0;padding: 0;background: #f79d00;  /* fallback for old browsers */
     background: -webkit-linear-gradient(to left, #64f38c, #f79d00);  /* Chrome 10-25, Safari 5.1-6 */
     background: linear-gradient(to left, #64f38c, #f79d00); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
@@ -470,6 +550,34 @@
         width: 400px;
         height: 400px;background:  none;">
 
+          <img src="./Assets/2.8.JPG" alt="i" style="width: 400px;height: 400px;" onclick="onClick(this)"
+            class="w3-hover-opacity">
+
+        </div>
+
+        <div class="swiper-slide" id="3" style="background-position: center;
+        background-size: cover;
+        width: 400px;
+        height: 400px;background:  none;">
+
+          <img src="./Assets/2.9.JPG" alt="i" style="width: 400px;height: 400px;" onclick="onClick(this)"
+            class="w3-hover-opacity">
+
+        </div>
+        <div class="swiper-slide" id="3" style="background-position: center;
+        background-size: cover;
+        width: 400px;
+        height: 400px;background:  none;">
+
+          <img src="./Assets/2.92.JPG" alt="i" style="width: 400px;height: 420px;" onclick="onClick(this)"
+            class="w3-hover-opacity">
+
+        </div>
+        <div class="swiper-slide" id="3" style="background-position: center;
+        background-size: cover;
+        width: 400px;
+        height: 400px;background:  none;">
+
           <img src="./Assets/2.6.JPG" alt="i" style="width: 400px;height: 420px;" onclick="onClick(this)"
             class="w3-hover-opacity">
 
@@ -481,13 +589,14 @@
         height: 400px;background:  none;">
           <div class="imgBx">
 
-            <img src="./Assets/2.1.0.jpg" alt="i" style="width: 360px;height: 400px;" onclick="onClick(this)"
+            <img src="./Assets/2.1.0.JPG" alt="i" style="width: 360px;height: 400px;" onclick="onClick(this)"
               class="w3-hover-opacity">
 
           </div>
 
 
         </div>
+
         <div class="swiper-slide" id="3" style="background-position: center;
         background-size: cover;
         width: 400px;
@@ -500,6 +609,7 @@
           </div>
 
         </div>
+
         <div class="swiper-slide" id="3" style="background-position: center;
         background-size: cover;
         width: 400px;
@@ -534,7 +644,16 @@
         width: 400px;
         height: 400px;background:  none;">
 
-          <img src="./Assets/2.7.jpg" alt="i" style="width: 380px;height: 420px;" onclick="onClick(this)"
+          <img src="./Assets/2.7.JPG" alt="i" style="width: 380px;height: 420px;" onclick="onClick(this)"
+            class="w3-hover-opacity">
+
+        </div>
+        <div class="swiper-slide" id="3" style="background-position: center;
+        background-size: cover;
+        width: 400px;
+        height: 400px;background:  none;">
+
+          <img src="./Assets/2.91.JPG" alt="i" style="width: 380px;height: 420px;" onclick="onClick(this)"
             class="w3-hover-opacity">
 
         </div>
@@ -543,9 +662,12 @@
 
 
 
+
       </div>
       <!-- Add Pagination -->
       <div class="swiper-pagination"></div>
+      <div class="swiper-button-next" style="color: white;"></div>
+      <div class="swiper-button-prev" style="color: white;"></div>
     </div>
   </div>
 
@@ -585,8 +707,8 @@
         </div>
         <div class="content">
           <h2>Dr. Geethanjali Sinha</h2>
-          <button onclick="document.getElementById('id03').style.display='block'" class="w3-button w3-green w3-medium"
-            style="text-align: justify; border-radius: 7px;">Director's message</button>
+          <button button data-toggle="modal" data-target="#exampleModal1" class="w3-button w3-green w3-medium"
+            style="border-radius: 7px;">Director's message</button>
         </div>
       </div>
 
@@ -596,8 +718,9 @@
         </div>
         <div class="content">
           <h2>Dr. Sulagna Bhowmick</h2>
-          <button onclick="document.getElementById('id02').style.display='block'" class="w3-button w3-green w3-medium"
-            style="text-align: justify; border-radius: 7px;">Principal's message</button>
+          <button button data-toggle="modal" data-target="#exampleModal2" class="w3-button w3-green w3-medium"
+            style="border-radius: 7px;">Principal's
+            message</button>
 
         </div>
       </div>
@@ -608,301 +731,425 @@
         </div>
         <div class="content">
           <h2></h2>
-          <button onclick="document.getElementById('id01').style.display='block'" class="w3-button w3-green w3-medium"
+          <button data-toggle="modal" data-target="#exampleModalLong" class="w3-button w3-green w3-medium"
             style="border-radius: 7px;">Meet Our Teachers</button>
 
         </div>
       </div>
     </div>
-    <div id="id03" class="w3-modal  w3-animate-opacity">
-      <div class="w3-modal-content ">
-        <div class="w3-container" style="width: 500px;height: 700px;margin-top: 40px;">
-          <span onclick="document.getElementById('id03').style.display='none'" class="w3-button w3-display-topright"
-            style="font-weight: bolder; font-size: x-large;">&times;</span>
-          <img src="./Assets/director.jpg" alt="image" class="w3-display-middle" style="width: 500px;height: 700px;">
+
+
+
+    <div class="modal fade" id="exampleModal1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel1"
+      aria-hidden="true">
+      <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel1">Message from the Director</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <p>“Children are like buds in a garden and should be carefully and lovingly nurtured, as they are the future
+              of
+              the nation and the citizens of tomorrow.”
+            </p>
+            <div class="w3-row-padding">
+              <div class="w3-display-container">
+                <div class="w3-display-right">
+                  <h6>Pandit Jawahar Lal Nehru</h5>
+                </div>
+              </div>
+
+
+            </div>
+            <br>
+            <p>A small step towards school for a vivid exposure in a child's life……
+            </p>
+
+            <p>Children are like wet clay which are to be molded into beguiling figurines. We at Rainbow Kids aim at the
+              integral development, characterized by dose and careful monitoring of each child and their development;
+              always keeping in mind their individual process of growth. This is an exciting learning state where a
+              child's natural curiosity and spontaneity will be given a center stage of expression.
+              Each child will encounter the creative spaces and allow for exploration and discovery and that will
+              activate their imagination.
+
+            </p>
+            <p>The main tenet of our school is the acquisition of grail that will open their windows to the world and
+              accept it with hope and respect for the social and natural gifts ensured by our teachers and mentors who
+              aim to provide the knowledge along with love and care. We aspire to develop self-esteem, good personal
+              habits, basic social values, cognitive maturity through joyful and positive experiences that will allow
+              the tender minds to be comprehensive and accumulative.
+            </p>
+            <p>We will share our joy and concern to the kids in the journey of their growing and encourage them to
+              develop their own abilities and qualities. Together we shall discover their flair that will reflect their
+              uniqueness with distinctive capabilities.
+            </p>
+            <br>
+            <br>
+            <div class="w3-display-container">
+              <div class="w3-display-right">
+                <img src="./Assets/director_sign.jpg" alt="signature" style="width: 280px;height: 120px; ">
+              </div>
+            </div>
+
+            <br>
+
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="w3-button w3-green w3-margin" data-dismiss="modal">Close</button>
+
+          </div>
         </div>
       </div>
     </div>
-    <script>
-      // Get the modal
 
-      let modal = document.getElementById('id03');
+    <div class="modal fade" id="exampleModal2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel2"
+      aria-hidden="true">
+      <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel2">Message from the Principal</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
 
 
-      // When the user clicks anywhere outside of the modal, close it
+            <p>
+              As being a preschool entrepreneur it's an essential role where we aim to provide a complete
+              interactive learning with creativity and constructivism. As placing foundation bricks in the
+              preliminary age of a preschooler, we pose for the responsible duty to show our innovative approaches
+              and genuine concern to make their early learning memories joyful and conceited.
 
-      // When the user clicks anywhere outside of the modal, close it
-      window.onclick = function (event) {
-        if (event.target == modal) {
-          modal.style.display = "none";
-        }
-      }
-    </script>
-    <div id="id02" class="w3-modal  w3-animate-opacity">
-      <div class="w3-modal-content  ">
-        <div class="w3-container" style="width: 500px;height: 700px;margin-top: 40px;">
-          <span onclick="document.getElementById('id02').style.display='none'" class="w3-button w3-display-topright"
-            style="font-weight: bolder; font-size: x-large; ">&times;</span>
-          <img src="./Assets/Untitled-1.jpg" alt="image" class="w3-display-middle" style="width: 500px;height: 700px;">
-          &times;
+            </p>
+            <p>
+              It's necessary to work and enhance upon stimulating and infusing their individual instincts and
+              abilities to ameliorate and reveal the glaze of their personality by nurturing their natural
+              inquisitiveness.
+
+
+            </p>
+            <p>
+              Rainbow Kids ensures for the development of thinking through a strong curriculum which proposes the
+              child’s capability to perform basic self care including physical, social and emotional competence
+              afferent with development of communication skills along with intelligence through a holistic
+              development procedure which will indulge and breed the positive strength and confidence to express
+              them between the vast exposure where they will start for the further tenure of formal schooling.
+
+            </p>
+            <p>
+              Assenting to the thoughts of famous philosopher and physician Maria Montessori, which refers “ The
+              goal of early childhood should be to captivate the child’s own natural desire to learn.”
+
+
+            </p>
+            <br>
+            <br>
+            <br>
+            <div class="w3-display-container">
+              <div class="w3-display-right">
+                <img src="./Assets/princi-sign.jpg" alt="signature" style="width: 280px;height: 120px; ">
+              </div>
+            </div>
+
+            <br>
+
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="w3-button w3-green w3-margin" data-dismiss="modal">Close</button>
+
+          </div>
+
         </div>
-
       </div>
-      <script>
-        // Get the modal
-
-        var modal = document.getElementById('id02');
-
-
-        // When the user clicks anywhere outside of the modal, close it
-
-        // When the user clicks anywhere outside of the modal, close it
-        window.onclick = function (event) {
-          if (event.target == modal) {
-            modal.style.display = "none";
-          }
-        }
-      </script>
     </div>
 
-    <div id="id01" class="w3-modal w3-animate-opacity ">
-      <div class="w3-modal-content ">
-        <div class="w3-container" style="width: 500px;height: 700px;margin-top: 40px;">
-          <span onclick="document.getElementById('id01').style.display='none'" class="w3-button w3-display-topright"
-            style="font-weight: bolder; font-size: x-large;">&times;</span>
+    <div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle"
+      aria-hidden="true">
+      <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel2">Our Teachers</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
 
-          <img src="./Assets/teach4.jpg" alt="image" class="w3-display-middle" style="width: 500px;height: 700px;">
+          <div class="modal-body">
+
+            <img src="./Assets/teach2.jpg" alt="image"
+              style="width: 120px;height: 120px;display: center;flex-wrap: wrap;">
+            <h5>Smita Sukul</h5>
+            <br>
+
+            <div class="w3-row">
+              <p>A recent survey by Child Psychological Association of India, fortifies that the children attending
+                preschool have faster adaptability of communication skills comparatively with the peers who stay at
+                home.
+              </p>
+
+              <p>In my opinion attending a preschool helps a kid to not only develop good communication skills but also
+                makes efficient and comfortable to join with primary schools furtherimproving their social interactions,
+                instills confidence and instigates acquisition of basic skills in the era of nuclear families.
+
+              </p>
+            </div>
+            <img src="./Assets/teach3.jpg" alt="image"
+              style="width: 120px;height: 120px;display: center;flex-wrap: wrap;">
+            <h5>Sneha Bharati</h5>
+            <br>
+
+
+            <p>"Every child has a different learning style and pace. Each child is unique, not only capable of learning
+              but also capable of succeeding."- Robert John Meehan
+            </p>
+            <p>In preschool the toddlers get the opportunity to inculcate the habit of staying away from parents for
+              some time to expose themselves individually in the vast and vivid human society. Its a place where they
+              not only have the choices of performing various activity but also the preschool motivates the kids to
+              accumulate various motor skills and inspires to proceed with comprehensive reasoning.
+            </p>
+            <img src="./Assets/teach1.jpg" alt="image"
+              style="width: 100px;height: 120px;display: center;flex-wrap: wrap;">
+            <h5>Munmun Choudhary</h5>
+            <br>
+
+            <p>"Children must be taught 'How to think' and not 'What to Think'."- Margaret Mead
+            </p>
+            <p>Preschool is a defined curriculum where kids under the age of 5 develop basic social skills to rest upon
+              confidence and independent expression. We at Rainbow kids are intended to supply the sense of self
+              presentation in kids through the playful and apprehensive guidance for aesthetic, music and language
+              skills development. Our motto is to illuminate the qualities of share and care among peers and present
+              themselves as an authoritative figure outside the home.
+            </p>
+
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="w3-button w3-green w3-margin" data-dismiss="modal">Close</button>
+
+          </div>
         </div>
       </div>
     </div>
-  </div>
 
 
-  </div>
-
-  <script>
-    // Get the modal
-
-    var modal = document.getElementById('id03');
 
 
-    // When the user clicks anywhere outside of the modal, close it
 
-    // When the user clicks anywhere outside of the modal, close it
-    window.onclick = function (event) {
-      if (event.target == modal) {
-        modal.style.display = "none";
-      }
-    }
-  </script>
-
-  <div class="w3-row-padding"
-    style="justify-content: center;align-items: center; margin-top: 0; width: 100%;font-size: 16px;background: #c33764; margin: 0;">
-    <div class="w3-col m12 l7" style="  margin-left: 5px; background: #1d2671;
-    color: azure; font-size: 16px;
+    <div class="w3-row-padding"
+      style="font-family: 'Playfair Display', serif;justify-content: center;align-items: center; margin-top: 0; width: 100%;font-size: 16px;background: #c33764; margin: 0;">
+      <div class="w3-col m12 l7" style="  margin-left: 5px; background: #1d2671;
+    color: azure; font-size: 16px;font-family: 'Playfair Display', serif;
     ">
-      <h1 class="w3-display-top">Join Us!</h1>
-      <a name="Join"></a>
-      <p>
-        Play is an essential part of early learning. Children are not meant to sit still, but to play and grow. Being a
-        part of our passionate crew will let your children become the best version of themselves. Our fun filled
-        activities, theme concept learning and modern teaching aids aim at developing your children's cognitive,
-        socio-emotional and physical skills.
-      </p>
-      <p>
-        Ages for Admission: 2 and 3 years onward.
-      </p>
-      <p>
-        Application Procedure:
-      </p>
-      <li>Download the application form by selecting 'Pay Now' and paying the application form fees. </li>
-      <li>Fill out the application form
-        attentively.</li>
-      <li>Submit the application form with required Identification proofs and a copy of payment
-        confirmation email to the school office.</li>
+        <h1 class="w3-display-top" style="font-family: 'Playfair Display', serif;">Join Us!</h1>
+        <a name="Join"></a>
+        <p style="font-family: 'Playfair Display', serif;">
+          Play is an essential part of early learning. Children are not meant to sit still, but to play and grow. Being
+          a
+          part of our passionate crew will let your children become the best version of themselves. Our fun filled
+          activities, theme concept learning and modern teaching aids aim at developing your children's cognitive,
+          socio-emotional and physical skills.
+        </p>
+        <p style="font-family: 'Playfair Display', serif;">
+          Ages for Admission: 2 and 3 years onward.
+        </p>
+        <p style="font-family: 'Playfair Display', serif;">
+          Application Procedure:
+        </p>
+        <li style="font-family: 'Playfair Display', serif;">Download the application form by selecting 'Pay Now' and
+          paying the application form fees. </li>
+        <li style="font-family: 'Playfair Display', serif;">Fill out the application form
+          attentively.</li>
+        <li style="font-family: 'Playfair Display', serif;">Submit the application form with required Identification
+          proofs and a copy of payment
+          confirmation email to the school office.</li>
+        <br>
 
-      <p>
-        Fee Structure Playgroup:
-      </p>
-      <table class="w3-table">
+        <p style="font-family: 'Playfair Display', serif;">
+          Fee Structure Playgroup:
+        </p>
+        <table class="w3-table" style="font-family: 'Playfair Display', serif;">
 
-        <tr>
-          <td>Admission Fee</td>
+          <tr>
+            <td style="font-family: 'Playfair Display', serif;">Admission Fee</td>
 
-          <td>2000 INR </td>
-        </tr>
-        <tr>
-          <td>Kit Charges</td>
+            <td>2000 INR </td>
+          </tr>
+          <tr>
+            <td style="font-family: 'Playfair Display', serif;">Kit Charges</td>
 
-          <td>2000 INR</td>
-        </tr>
-        <tr>
-          <td>Two Months' combined Fee</td>
+            <td>2000 INR</td>
+          </tr>
+          <tr>
+            <td style="font-family: 'Playfair Display', serif;">Two Months' combined Fee</td>
 
-          <td>2000 INR</td>
-        </tr>
-        <tr>
-          <td>Application Form Fee</td>
+            <td>2000 INR</td>
+          </tr>
+          <tr>
+            <td style="font-family: 'Playfair Display', serif;">Application Form Fee</td>
 
-          <td>100 INR</td>
-        </tr>
-        <tr>
-          <td>Total</td>
+            <td>100 INR</td>
+          </tr>
+          <tr>
+            <td style="font-family: 'Playfair Display', serif;">Total</td>
 
-          <td>6100 INR</td>
-        </tr>
-      </table>
-      <br>
+            <td>6100 INR</td>
+          </tr>
+        </table>
+        <br>
 
-      <p>
-        Fee Structure Nursery:
-      </p>
-      <table class="w3-table w3-margin-top">
+        <p style="font-family: 'Playfair Display', serif;">
+          Fee Structure Nursery:
+        </p>
+        <table class="w3-table w3-margin-top" style="font-family: 'Playfair Display', serif;">
 
-        <tr>
-          <td>Admission Fee</td>
+          <tr style="font-family: 'Playfair Display', serif;">
+            <td style="font-family: 'Playfair Display', serif;">Admission Fee</td>
 
-          <td>2000 INR</td>
-        </tr>
-        <tr>
-          <td>Kit Charges</td>
+            <td>2000 INR</td>
+          </tr>
+          <tr style="font-family: 'Playfair Display', serif;">
+            <td style="font-family: 'Playfair Display', serif;">Kit Charges</td>
 
-          <td>2000 INR</td>
-        </tr>
-        <tr>
-          <td>Two Months' combined Fee</td>
+            <td>2000 INR</td>
+          </tr>
+          <tr style="font-family: 'Playfair Display', serif;">
+            <td style="font-family: 'Playfair Display', serif;">Two Months' combined Fee</td>
 
-          <td>2400 INR</td>
-        </tr>
-        <tr>
-          <td>Application Form Fee</td>
+            <td>2400 INR</td>
+          </tr>
+          <tr style="font-family: 'Playfair Display', serif;">
+            <td style="font-family: 'Playfair Display', serif;">Application Form Fee</td>
 
-          <td>100 INR</td>
-        </tr>
-        <tr>
-          <td>Total</td>
+            <td>100 INR</td>
+          </tr style="font-family: 'Playfair Display', serif;">
+          <tr>
+            <td style="font-family: 'Playfair Display', serif;">Total</td>
 
-          <td>6500 INR</td>
-        </tr>
-      </table>
+            <td>6500 INR</td>
+          </tr>
+        </table>
 
-      <div class="pm-button " style="display: flex; margin-top:20px; margin-left: 40%;margin-right: 50%;">
-        <a target=”_blank” href="https://www.payumoney.com/paybypayumoney/#/08EA22333B232AC90E9264E8C54DC2D0"><img
-            src="https://www.payumoney.com/media/images/payby_payumoney/new_buttons/21.png" /></a>
+        <div class="pm-button " style="display: flex; margin-top:20px; margin-left: 40%;margin-right: 50%;">
+          <a target=”_blank” href="https://www.payumoney.com/paybypayumoney/#/08EA22333B232AC90E9264E8C54DC2D0"><img
+              src="https://www.payumoney.com/media/images/payby_payumoney/new_buttons/21.png" /></a>
+        </div>
+        <br>
       </div>
-      <br>
+
+
+      <div class="w3-col m12 l4 " style="position: relative; background: #c33764;color: azure;display: center;">
+        <img src="./Assets/teacher_application.jpg" alt="image"
+          style="width: 100%;height:450px;justify-content: center;align-items: center; margin-top:10px;">
+        <h3 style="color: azure;font-family: 'Playfair Display', serif;">Prospective Teachers</h3>
+        <p style="color: azure;font-family: 'Playfair Display', serif;">
+          We as a team constantly look to grow by including proficient teachers with unwavering love for our sweet
+          angels.
+          Our teachers are caring, friendly and work together ambitiously towards making the school environment caring,
+          safe and full of fun and laughter. The teachers will follow the weekly calendar and communicate with parents
+          on
+          a daily basis(*).
+
+        </p>
+
+        <p style="font-family: 'Playfair Display', serif;">
+          Download and fill out the aptitude evaluation form and email the form to rainbowkidsbgp@gmail.com.
+        </p>
+        <br>
+        <span style="margin-bottom: 10px;"><a href="./Teaching application form.pdf" target="_blank">Teacher's
+            Aptitude Evaluation Form
+            Link</a></span>
+        <br>
+      </div>
+
     </div>
 
 
-    <div class="w3-col m12 l4 " style="position: relative; background: #c33764;color: azure;display: center;">
-      <img src="./Assets/teacher_application.jpg" alt="image"
-        style="width: 100%;height:450px;justify-content: center;align-items: center; margin-top:10px;">
-      <h3 style="color: azure;">Prospective Teachers</h3>
-      <p style="color: azure;">
-        We as a team constantly look to grow by including proficient teachers with unwavering love for our sweet angels.
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad aliquam maiores culpa, eveniet vitae reprehenderit.
-        Doloremque expedita deleniti impedit aliquid dolore aperiam atque fugit quod cupiditate, dolores minus unde
-        quam!
-      </p>
-      <span><a href="#">Download Link</a></span>
+
+    <div class="w3-container"
+      style="width:100%;display: flex;justify-content: center;align-items: center;flex-wrap: wrap; min-height: 80vh;background:rgb(214, 214, 214) ; margin: 0;">
+      <div class="test-card">
+        <span class="icon fa fa-quote-left fa-3x"
+          style="display: flex; justify-content: center;align-items: center;"></span>
+        <div class="test-img">
+          <img src="./Assets/test1.jpg" alt="testimonial1"
+            style="width:100px;height:100px;border-radius:50%;margin-left: 35%; margin-right: 50%;">
+          <br>
+          <h3 style="margin-left: 5%;">Rev. Fr. Varghese Panangatt</h3>
+
+
+          <h4 style="margin-left: 10%;">Principal, St. Joseph's School, Bhagalpur</h4>
+        </div>
+        <br>
+        <p>Very much impressed to see the approach of the school in order to put a foundation with strength, love and
+          concerned approach. I wish Rainbow Kids A Play School my all heartiest wish for a wonderful beginning as
+          stepping forward in the field of preschool education. As being an academician I appreciate and encourage their
+          positive spirit to give the playschool learning in an appropriate and effective way along with wonderful
+          environment.</p>
+      </div>
+      <div class="test-card">
+        <span class="icon fa fa-quote-left fa-3x"
+          style="display: flex; justify-content: center;align-items: center;"></span>
+        <div class="test-img">
+          <img src="./Assets/test2.jpg" alt="testimonial1"
+            style="width:100px;height:100px;border-radius:50%;margin-left: 35%; margin-right: 50%;">
+          <br>
+          <h3 style="margin-left: 20%;">Dr. Vinod Kumar</h3>
+
+          <h4 style="margin-left: 10%;">President IDA Anga Pradesh, Bhagalpur</h4>
+
+        </div>
+
+
+        <br>
+        <p>Wonderful effort with lots of good work done under the supervision of impressive facilities, Principal and
+          Director. Best Wishes.</p>
+      </div>
+      <div class="test-card">
+        <span class="icon fa fa-quote-left fa-3x"
+          style="display: flex; justify-content: center;align-items: center;"></span>
+        <div class="test-img">
+          <img src="./Assets/test3.jpg" alt="testimonial1"
+            style="width:100px;height:100px;border-radius:50%;margin-left: 35%; margin-right: 50%;">
+          <br>
+
+          <h3 style="margin-left: 20%;">Mr Rajiv Kant Mishra </h3>
+
+          <h4 style="margin-left: 10%;">Director J.S. Educations, Bhagalpur</h4>
+
+        </div>
+        <br>
+        <p>A fantastic environment which tingles the feeling of childhood joy. A fabulous place for toddlers.</p>
+      </div>
     </div>
-
-  </div>
-
-  <div class="w3-cell-row">
-    <div class="w3-container w3-mobile w3-cell-middle" style="
+    <div class="w3-cell-row">
+      <div class="w3-container w3-mobile w3-cell-middle" style="
           position: relative;
           width: 100%;
           background-color: rgb(214, 214, 214);
         ">
-      <h4 style="
-            font-family: Verdana, Geneva, Tahoma, sans-serif;
-            color: rgb(49, 165, 165);
-            background: rgb(214, 214, 214);
-            width: 100%;
-            margin: 0;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-weight: bold;
-          ">
-        Follow us on:
-      </h4>
-      <div class="w3-container w3-cell w3-mobile w3-cell-middle" style="
+
+        <div class="w3-container w3-cell w3-mobile w3-cell-middle" style="
             min-height: 15vh;
             display: flex;
             align-items: center;
             justify-content: center;
             background: rgb(214, 214, 214);
           ">
-        <a href="https://www.facebook.com/search/top?q=rainbowkids%20bgp" target="_blank" class="btn"><i
-            class="fa fa-facebook-f"></i></a>
-        <a href="#" class="btn"><i class="fa fa-youtube"></i></a>
-        <a href="#" class="btn"><i class="fa fa-instagram"></i></a>
+          <a href="https://www.facebook.com/search/top?q=rainbowkids%20bgp" target="_blank" class="btn"><i
+              class="fa fa-facebook-f"></i></a>
+          <a href="https://www.youtube.com/channel/UCtcCB979UCsjnzJxhLYaNHw" target="_blank" class="btn"><i
+              class="fa fa-youtube"></i></a>
+          <a href="#Contact" class="btn"><i class="fa fa-google"></i></a>
+        </div>
       </div>
     </div>
-  </div>
 
-  <div class="w3-container"
-    style="display: flex;justify-content: center;align-items: center;flex-wrap: wrap; min-height: 80vh;background:rgb(214, 214, 214) ; margin: 0;">
-    <div class="test-card">
-      <span class="icon fa fa-quote-left fa-3x"
-        style="display: flex; justify-content: center;align-items: center;"></span>
-      <div class="test-img">
-        <img src="./Assets/test1.jpg" alt="testimonial1"
-          style="width:100px;height:100px;border-radius:50%;margin-left: 35%; margin-right: 50%;">
-        <br>
-        <h3 style="margin-left: 5%;">Rev. Fr. Varghese Panangatt</h3>
-
-
-        <h4 style="margin-left: 10%;">Principal, St. Joseph's School, Bhagalpur</h4>
-      </div>
-      <br>
-      
-      <p>Very much impressed to see the approach of the school in order to put a foundation with strength, love and
-        concerned approach. I wish Rainbow Kids A Play School my all heartiest wish for a wonderful beginning as
-        stepping forward in the field of preschool education. As being an academician I appreciate and encourage their
-        positive spirit to give the playschool learning in an appropriate and effective way along with wonderful
-        environment.</p>
-    </div>
-    <div class="test-card">
-      <span class="icon fa fa-quote-left fa-3x"
-        style="display: flex; justify-content: center;align-items: center;"></span>
-      <div class="test-img">
-        <img src="./Assets/test2.jpg" alt="testimonial1"
-          style="width:100px;height:100px;border-radius:50%;margin-left: 35%; margin-right: 50%;">
-        <br>
-        <h3 style="margin-left: 20%;">Dr. Vinod Kumar</h3>
-
-        <h4 style="margin-left: 10%;">President IDA Anga Pradesh, Bhagalpur</h4>
-
-      </div>
-
-
-      <br>
-      <p>Wonderful effort with lots of good work done under the supervision of impressive facilities, Principal and
-        Director. Best Wishes.</p>
-    </div>
-    <div class="test-card" style="height: 500px;">
-      <span class="icon fa fa-quote-left fa-3x"
-        style="display: flex; justify-content: center;align-items: center;"></span>
-      <div class="test-img">
-        <img src="./Assets/test3.jpg" alt="testimonial1"
-          style="width:100px;height:100px;border-radius:50%;margin-left: 35%; margin-right: 50%;">
-        <br>
-
-        <h3 style="margin-left: 20%;">Mr Rajiv Kant Mishra </h3>
-
-        <h4 style="margin-left: 10%;">Director J.S. Educations, Bhagalpur</h4>
-
-      </div>
-      <br>
-      <p>A fantastic environment which tingles the feeling of childhood joy. A fabulous place for toddlers.</p>
-    </div>
-  </div>
-
-  <div class="w3-cell-row" style="
-        height: 40vh;
+    <div class="w3-row-padding" style="
+      width:100%;
+       
         background: #0f2027; /* fallback for old browsers */
         background: -webkit-linear-gradient(
           to top,
@@ -917,9 +1164,8 @@
           #0f2027
         ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
       ">
-    <div class="w3-container w3-cell w3-cell-middle w3-mobile"
-      style="width: 450px; margin-left: 10px; color: floralwhite;">
-      <img src="./Assets/Logo-cropped.png" alt="Logo" style="
+      <div class="w3-col w3-container m12 l3 w3-margin" style="width: 450px; margin-left: 10px; color: floralwhite;">
+        <img src="./Assets/Logo-cropped.png" alt="Logo" style="
             margin-left: 15%;
             width: 150px;
             height: 150px;
@@ -928,79 +1174,84 @@
             margin-bottom: 10px;
           " />
 
-      <br />
-      <h4 style="margin-left: 20%;">Quick Links</h4>
+        <br />
+        <h4 style="margin-left: 20%;">Quick Links</h4>
 
-      <ul style="margin-left: 20%;">
-        <li>
-          <a href="#Home">Home</a>
-        </li>
-        <li>
-          <a href="#Mentors">Our Mentors</a>
-        </li>
-        <li>
-          <a href="#Gallery">Gallery</a>
-        </li>
+        <ul style="margin-left: 20%;">
+          <li>
+            <a href="#Home">Home</a>
+          </li>
+          <li>
+            <a href="#Gallery">Gallery</a>
+          </li>
+          <li>
+            <a href="#Mentors">Our Mentors</a>
+          </li>
 
-        <li>
-          <a href="#Join">Join Us!</a>
-        </li>
-      </ul>
-    </div>
-    <div class="w3-container w3-cell w3-cell-middle w3-mobile" id="Contact" style="color: floralwhite; width: 450px;">
-      <i class="fa fa-map-marker fa-2x" style="color: floralwhite; margin-left: 45%; margin-right: 55%;"></i>
-      <br />
-      <h5 style="
+
+          <li>
+            <a href="#Join">Join Us!</a>
+          </li>
+        </ul>
+      </div>
+      <div class="w3-col w3-container m12 l4 w3-margin" id="Contact"
+        style="color: floralwhite; width: 450px; margin-top: 10px;">
+        <i class="fa fa-map-marker fa-2x"
+          style="color: floralwhite; margin-left: 20%; margin-right: 60%; margin-top: 10px;"></i>
+        <br />
+        <h5 style="
+            width:310px;
+            margin-left: 3%;
+            font-style: italic;
+            justify-content: space-evenly;
+          ">
+          Santwana Niketan, 28 Sarat Chandra Path, Near Mokshada Girls School,
+          Masakchak, Bhagalpur-812001
+        </h5>
+        <br />
+        <i class="fa fa-phone-square fa-2x" style="color: floralwhite; margin-left: 20%; margin-right: 60%;"></i>
+        <h5 style="
+            margin-left: 3%;
+            font-style: italic;
+            justify-content: space-evenly;
+          ">
+          +91-7070858908 , 0641-22409403
+        </h5>
+        <br />
+        <i class="fa fa-at fa-2x" style="color: floralwhite; margin-left: 20%; margin-right: 60%;"></i>
+        <h5 style="
+            color: floralwhite;
             margin-left: 5%;
             font-style: italic;
             justify-content: space-evenly;
           ">
-        Santwana Niketan, 28 Sarat Chandra Path, Near Mokshada Girls School,
-        Masakchak, Bhagalpur-812001
-      </h5>
-      <br />
-      <i class="fa fa-phone-square fa-2x" style="color: floralwhite; margin-left: 45%; margin-right: 55%;"></i>
-      <h5 style="
-            margin-left: 50px;
-            font-style: italic;
-            justify-content: space-evenly;
-          ">
-        +91-7070858908 , 0641-22409403
-      </h5>
-      <br />
-      <i class="fa fa-at fa-2x" style="color: floralwhite; margin-left: 45%; margin-right: 55%;"></i>
-      <h5 style="
-            color: floralwhite;
-            margin-left: 20%;
-            font-style: italic;
-            justify-content: space-evenly;
-          ">
-        rainbowkidsbgp@gmail.com
-      </h5>
-    </div>
-    <div class="w3-container w3-cell w3-mobile w3-cell-middle" style="margin-left: 30px;">
-      <br />
-      <h3 style="
+          rainbowkidsbgp@gmail.com
+        </h5>
+      </div>
+      <div class="w3-col w3-container m12 l4 w3-margin" style="margin-left: 30px;">
+        <br />
+        <h3 style="
             color: floralwhite;
             margin-left: 25%;
             font-style: italic;
             justify-content: space-evenly;
           ">
-        Post your inquiry:
-      </h3>
-      <br />
-      <form id="contact-form" action="#" method="post" style="margin-left: 10%;">
-        <input name="name" type="text" class="form-control" placeholder="Your Name...." />
+          Post your inquiry:
+        </h3>
         <br />
-        <input type="email" class="form-control" placeholder="Your email address...." />
-        <br />
-        <textarea name="message" class="form-control" placeholder="Your message...." rows="4" required></textarea>
-        <br />
-        <input type="submit" class="form-control submit" value="SEND" />
-      </form>
+        <form id="contact-form" action="#" method="post" style="margin-left: 10%;">
+          <input name="name" type="text" class="form-control" placeholder="Your Name...." />
+          <br />
+          <input type="email" class="form-control" placeholder="Your email address...." />
+          <br />
+          <textarea name="message" class="form-control" placeholder="Your message...." rows="4" required></textarea>
+          <br />
+          <input type="submit" class="form-control submit" value="SEND MESSAGE" />
+        </form>
+      </div>
     </div>
-  </div>
-  <div style="
+    <div class="w3-row-padding" style="width: 100%; ">
+      <div style="
         text-align: center;
         font-size: 22px;
         font-family: 'Bangers', cursive;
@@ -1010,12 +1261,13 @@ background: -webkit-linear-gradient(to right, #f8b500, #fceabb);  /* Chrome 10-2
 background: linear-gradient(to right, #f8b500, #fceabb); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 
       ">
-    &copy;Designed by Kumar 'Richie' Shantam
-  </div>
+        &copy;2020 Rainbow Kids A Play School. Designed by Kumar 'Richie' Shantam
+      </div>
 
+    </div>
 
-  <script type="module">
-    import Swiper from 'https://unpkg.com/swiper/swiper-bundle.esm.browser.min.js'
+    <script type="module">
+      import Swiper from 'https://unpkg.com/swiper/swiper-bundle.esm.browser.min.js'
     
       const swiper = new Swiper('.swiper-container', {
         effect: 'coverflow',
@@ -1030,12 +1282,17 @@ background: linear-gradient(to right, #f8b500, #fceabb); /* W3C, IE 10+/ Edge, F
           slideShadows: true,
         },
         pagination: {
-          el: '.swiper-pagination',
+        el: '.swiper-pagination',
+        
         },
+        navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
       });
   </script>
 
-  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 
   </div>
   <script type="text/javascript">
@@ -1061,8 +1318,37 @@ background: linear-gradient(to right, #f8b500, #fceabb); /* W3C, IE 10+/ Edge, F
     }
   </script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
-  <script src="script.js"></script>
+
   <script src="anime.min.js"></script>
+  <script src="script.js"></script>
+  <script>
+    var textWrapper = document.querySelector(".ml12");
+    textWrapper.innerHTML = textWrapper.textContent.replace(
+      /\S/g,
+      "<span class='letter'>$&</span>"
+    );
+
+    anime.timeline({
+        loop: true,
+      })
+      .add({
+        targets: ".ml12 .letter",
+        translateX: [40, 0],
+        translateZ: 0,
+        opacity: [0, 1],
+        easing: "easeOutExpo",
+        duration: 1200,
+        delay: (el, i) => 500 + 30 * i,
+      })
+      .add({
+        targets: ".ml12 .letter",
+        translateX: [0, -30],
+        opacity: [1, 0],
+        easing: "easeInExpo",
+        duration: 1100,
+        delay: (el, i) => 100 + 30 * i,
+      });
+  </script>
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
