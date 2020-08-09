@@ -47,10 +47,10 @@
 
     <div class="container-fluid" style="width: 100%;">
       <a href="#Home" class="navbar-brand"><img src="./Assets/Logo-cropped.png" alt="Logo" style="
-              width: 120px;
-              height: 120px;
+              width: 90px;
+              height: 90px;
               display: flex;
-              padding: 2.5px;
+              padding: 2px;
               position: center;
             " /></a>
 
@@ -122,49 +122,50 @@
           ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
           
           width: 100%;
+          
         ">
 
 
 
 
-      <div class="w3-col w3-container s10 m12 l4 w3-margin" style=" justify-content: center;align-items: center;">
+      <div class="w3-col w3-display-container m12 l4" >
 
-        <div class="w3-content" style="width: 370px; ">
-          <img src="./Assets/1.jpg" alt="img" style="width: 370px; height: 370px;" class="mySlides" />
+        
+          <img src="./Assets/1.jpg" alt="img" style="width: 370px; height: 370px;" class="w3-mobile mySlides" />
 
-          <img src="./Assets/2.jpg" alt="img" style="width:370px; height:370px;" class="mySlides" />
-
-
-          <img src="./Assets/slide.jpg" alt="img" style="width:370px; height:370px;" class="mySlides" />
-
-          <img src="./Assets/slide1.jpg" alt="img" style="width:370px; height:370px;" class="mySlides" />
+          <img src="./Assets/2.jpg" alt="img" style="width:370px; height:370px;" class="w3-mobile mySlides" />
 
 
+          <img src="./Assets/slide.jpg" alt="img" style="width:370px; height:370px;" class="w3-mobile mySlides" />
 
-          <img src="./Assets/slide3.jpg" alt="img" style="width:370px; height:370px;" class="mySlides" />
-
-
-          <img src="./Assets/slide4.jpg" alt="img" style="width:370px; height:370px;" class="mySlides" />
+          <img src="./Assets/slide1.jpg" alt="img" style="width:370px; height:370px;" class="w3-mobile mySlides" />
 
 
 
-          <img src="./Assets/3.jpg" alt="img" style="width:370px; height:370px;" class="mySlides" />
+          <img src="./Assets/slide3.jpg" alt="img" style="width:370px; height:370px;" class="w3-mobile mySlides" />
 
 
-          <img src="./Assets/4.jpg" alt="img" style="width:370px; height:370px;" class="mySlides" />
+          <img src="./Assets/slide4.jpg" alt="img" style="width:370px; height:370px;" class="w3-mobile mySlides" />
 
-          <img src="./Assets/5.jpg" alt="img" style="width:370px; height:370px;" class="mySlides" />
+
+
+          <img src="./Assets/3.jpg" alt="img" style="width:370px; height:370px;" class="w3-mobile mySlides" />
+
+
+          <img src="./Assets/4.jpg" alt="img" style="width:370px; height:370px;" class="w3-mobile mySlides" />
+
+          <img src="./Assets/5.jpg" alt="img" style="width:370px; height:370px;" class="w3-mobile mySlides" />
 
           <div class="w3-center">
             <div class="w3-section">
-              <button class="w3-button w3-light-green" style="border-radius:20px ; margin-right: 50px; outline:none;"
+              <button class="w3-button w3-light-green" style="border-radius:20px ;  outline:none;"
                 onclick="plusDivs(-1)">❮ Prev</button>
-              <button class="w3-button w3-light-green" style="border-radius:20px ; outline:none;"
+              <button class="w3-button w3-light-green" style="border-radius:20px ;margin-right: 40%; outline:none;"
                 onclick="plusDivs(1)">Next ❯</button>
             </div>
 
           </div>
-        </div>
+        
       </div>
       <script>
         var slideIndex = 1;
@@ -198,27 +199,27 @@
           dots[slideIndex - 1].className += " w3-red";
         }
       </script>
-      <div class="w3-col w3-container s10 m5 l3 " style="width:320px;justify-content: center;align-items: center;">
+      <div class="w3-col w3-container m5 l4 " style="width:320px;justify-content: center;align-items: center;">
         <h1 style="
-        margin-top: 13%;
+        margin-top: 10%;
         
         display: flex;
         font-size: 50px;
         font-family: 'Bangers', cursive;
         font-weight: 250;">Rainbow Kids: A Play School</h1>
         <br>
-        <h1 class="ml12" style="width: 310px;">Admissions Open!</h1>
+        <h1 class="ml12" style="width: 310px;">Admission Open!</h1>
 
 
       </div>
 
-      <div class="w3-col w3-container s10 m5 l5" style="width: 310px;height: 600px;margin-left: 0;">
-        <img src="./Assets/Facilities.jpg" alt="img" style="
+      <div class="w3-col w3-container m5 l4" style="width: 380px;height: 600px;margin-left: 0;">
+        <img src="./Assets/Facilities.jpg" class="w3-mobile" alt="img" style="
               margin-right: 5px;
               position: center;
               justify-content: center;
               align-items: center;
-              width: 400px;
+              width: 100%;
               height: 600px;
               margin-top: 10px;
             " />
@@ -232,12 +233,12 @@
   <div class="w3-display-container w3-mobile">
 
     <div id="particles-js">
-      <img src="./Assets/Vision.jpg" class="w3-display-topmiddle" alt="Image" style="
+      <img src="./Assets/Vision.jpg" class="w3-display-topmiddle w3-mobile" alt="Image" style="
             display: inline-flex;
             margin-top: 50px;
             margin-left: auto;
             margin-right: auto;
-            width: 440px;
+            width: 460px;
             
           " />
     </div>
@@ -400,7 +401,7 @@
         width: 400px;
         height: 380px;background:none;">
 
-          <img src="./Assets/3.5.JPG" alt="i" style="width: 400px;height: 370px;" onclick="onClick(this)"
+          <img src="./Assets/3.5.jpg" alt="i" style="width: 400px;height: 370px;" onclick="onClick(this)"
             class="w3-hover-opacity">
 
         </div>
@@ -409,7 +410,7 @@
         width: 400px;
         height: 380px;background:  none;">
 
-          <img src="./Assets/3.93.JPG" alt="i" style="width: 400px;height: 420px;" onclick="onClick(this)"
+          <img src="./Assets/3.93.jpg" alt="i" style="width: 400px;height: 420px;" onclick="onClick(this)"
             class="w3-hover-opacity">
 
         </div>
@@ -421,7 +422,7 @@
         height: 380px;background:  none;">
           <div class="imgBx">
 
-            <img src="./Assets/3.1.JPG" alt="i" style="width: 400px;height: 400px;" onclick="onClick(this)"
+            <img src="./Assets/3.1.jpg" alt="i" style="width: 400px;height: 400px;" onclick="onClick(this)"
               class="w3-hover-opacity">
 
           </div>
@@ -434,7 +435,7 @@
         height: 380px;background:  none;">
           <div class="imgBx">
 
-            <img src="./Assets/3.2.JPG" alt="i" style="width: 400px;height: 400px;" onclick="onClick(this)"
+            <img src="./Assets/3.2.jpg" alt="i" style="width: 400px;height: 400px;" onclick="onClick(this)"
               class="w3-hover-opacity">
 
           </div>
@@ -445,7 +446,7 @@
         width: 400px;
         height: 380px;background:  none;">
 
-          <img src="./Assets/3.3.JPG" alt="i" style="width: 400px;height: 400px;" onclick="onClick(this)"
+          <img src="./Assets/3.3.jpg" alt="i" style="width: 400px;height: 400px;" onclick="onClick(this)"
             class="w3-hover-opacity">
 
         </div>
@@ -454,7 +455,7 @@
         width: 400px;
         height: 380px;background:  none;">
 
-          <img src="./Assets/3.4.JPG" alt="i" style="background-position: center;
+          <img src="./Assets/3.4.jpg" alt="i" style="background-position: center;
             width: 400px;height: 400px;" onclick="onClick(this)" class="w3-hover-opacity">
 
         </div>
@@ -464,7 +465,7 @@
         width: 400px;
         height: 380px;background:  none;">
 
-          <img src="./Assets/3.6.JPG" alt="i" style="margin-left:15px;width: 380px;height: 430px;"
+          <img src="./Assets/3.6.jpg" alt="i" style="margin-left:15px;width: 380px;height: 430px;"
             onclick="onClick(this)" class="w3-hover-opacity">
 
         </div>
@@ -473,7 +474,7 @@
         width: 400px;
         height: 380px;background:  none;">
 
-          <img src="./Assets/3.7.JPG" alt="i" style="width: 400px;height: 420px;" onclick="onClick(this)"
+          <img src="./Assets/3.7.jpg" alt="i" style="width: 400px;height: 420px;" onclick="onClick(this)"
             class="w3-hover-opacity">
 
         </div>
@@ -482,7 +483,7 @@
         width: 400px;
         height: 380px;background:  none;">
 
-          <img src="./Assets/3.8.JPG" alt="i" style="width: 400px;height: 420px;" onclick="onClick(this)"
+          <img src="./Assets/3.8.jpg" alt="i" style="width: 400px;height: 420px;" onclick="onClick(this)"
             class="w3-hover-opacity">
 
         </div>
@@ -491,7 +492,7 @@
         width: 400px;
         height: 380px;background:  none;">
 
-          <img src="./Assets/3.9.JPG" alt="i" style="width: 400px;height: 420px;" onclick="onClick(this)"
+          <img src="./Assets/3.9.jpg" alt="i" style="width: 400px;height: 420px;" onclick="onClick(this)"
             class="w3-hover-opacity">
 
         </div>
@@ -500,7 +501,7 @@
         width: 400px;
         height: 380px;background:  none;">
 
-          <img src="./Assets/3.91.JPG" alt="i" style="width: 400px;height: 420px;" onclick="onClick(this)"
+          <img src="./Assets/3.91.jpg" alt="i" style="width: 400px;height: 420px;" onclick="onClick(this)"
             class="w3-hover-opacity">
 
         </div>
@@ -509,7 +510,7 @@
         width: 400px;
         height: 380px;background:  none;">
 
-          <img src="./Assets/3.92.JPG" alt="i" style="width: 400px;height: 420px;" onclick="onClick(this)"
+          <img src="./Assets/3.92.jpg" alt="i" style="width: 400px;height: 420px;" onclick="onClick(this)"
             class="w3-hover-opacity">
 
         </div>
@@ -569,7 +570,7 @@
         width: 400px;
         height: 400px;background:  none;">
 
-          <img src="./Assets/2.92.JPG" alt="i" style="width: 400px;height: 420px;" onclick="onClick(this)"
+          <img src="./Assets/2.92.jpg" alt="i" style="width: 400px;height: 420px;" onclick="onClick(this)"
             class="w3-hover-opacity">
 
         </div>
@@ -589,7 +590,7 @@
         height: 400px;background:  none;">
           <div class="imgBx">
 
-            <img src="./Assets/2.1.0.JPG" alt="i" style="width: 360px;height: 400px;" onclick="onClick(this)"
+            <img src="./Assets/2.1.0.jpg" alt="i" style="width: 360px;height: 400px;" onclick="onClick(this)"
               class="w3-hover-opacity">
 
           </div>
@@ -644,7 +645,7 @@
         width: 400px;
         height: 400px;background:  none;">
 
-          <img src="./Assets/2.7.JPG" alt="i" style="width: 380px;height: 420px;" onclick="onClick(this)"
+          <img src="./Assets/2.7.jpg" alt="i" style="width: 380px;height: 420px;" onclick="onClick(this)"
             class="w3-hover-opacity">
 
         </div>
@@ -1138,7 +1139,7 @@
             justify-content: center;
             background: rgb(214, 214, 214);
           ">
-          <a href="https://www.facebook.com/search/top?q=rainbowkids%20bgp" target="_blank" class="btn"><i
+          <a href="https://www.facebook.com/rainbowkids.bgp" target="_blank" class="btn"><i
               class="fa fa-facebook-f"></i></a>
           <a href="https://www.youtube.com/channel/UCtcCB979UCsjnzJxhLYaNHw" target="_blank" class="btn"><i
               class="fa fa-youtube"></i></a>
@@ -1319,7 +1320,6 @@ background: linear-gradient(to right, #f8b500, #fceabb); /* W3C, IE 10+/ Edge, F
   </script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
 
-  <script src="anime.min.js"></script>
   <script src="script.js"></script>
   <script>
     var textWrapper = document.querySelector(".ml12");
